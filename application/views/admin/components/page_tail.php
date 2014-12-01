@@ -20,6 +20,7 @@
 <script src="../../assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
 <script src="../../assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
 <script src="../../assets/admin/pages/scripts/login.js" type="text/javascript"></script>
+<script src="../../assets/admin/layout/scripts/link.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script src="../../assets/global/plugins/gritter/js/jquery.gritter.js" type="text/javascript"></script>
 <?php if ($this->session->flashdata('error') != ''): ?>
