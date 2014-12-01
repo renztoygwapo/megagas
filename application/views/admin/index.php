@@ -3,7 +3,7 @@
 	<div class="page-content-wrapper">
 
 			<h3 class="page-title">
-			WELCOME <small>MEGA GAS</small>
+			WELCOME <small><?php echo $this->session->userdata('username'); ?></small>
 			</h3>
 		
 			<div class="tiles">
