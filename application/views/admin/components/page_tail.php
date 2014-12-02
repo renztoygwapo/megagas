@@ -12,7 +12,14 @@
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="../../assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
 <script type="text/javascript" src="../../assets/global/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="../../assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../assets/global/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+<script type="text/javascript" src="../../assets/global/plugins/datatables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+<script type="text/javascript" src="../../assets/global/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js"></script>
+<script type="text/javascript" src="../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="../../assets/global/scripts/metronic.js" type="text/javascript"></script>
@@ -21,6 +28,9 @@
 <script src="../../assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
 <script src="../../assets/admin/pages/scripts/login.js" type="text/javascript"></script>
 <script src="../../assets/admin/layout/scripts/link.js" type="text/javascript"></script>
+<script src="../../assets/admin/pages/scripts/table-advanced.js"></script>
+
+
 <!-- END PAGE LEVEL SCRIPTS -->
 <script src="../../assets/global/plugins/gritter/js/jquery.gritter.js" type="text/javascript"></script>
 <?php if ($this->session->flashdata('error') != ''): ?>
@@ -49,6 +59,7 @@ Layout.init(); // init current layout
 QuickSidebar.init(); // init quick sidebar
 Demo.init(); // init demo features
   Login.init();
+  TableAdvanced.init();
 });
 </script>
 <!-- END JAVASCRIPTS -->

@@ -1,9 +1,7 @@
 <body class="login">
 <!-- BEGIN LOGO -->
 <div class="logo">
-	<a href="index.html">
-	<img src="../../assets/admin/layout/img/logo-big.png" alt=""/>
-	</a>
+	<h3 style="color:yellow;">MEGA GAS Corp.</h3>
 </div>
 
 <!-- END SIDEBAR TOGGLER BUTTON -->
