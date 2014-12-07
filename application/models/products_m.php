@@ -1,9 +1,9 @@
 <?php
-class Category_m extends MY_Model
+class Products_m extends MY_Model
 {
 	
-	protected $_table_name = 'category';
-	protected $_order_by = 'product_name';
+	protected $_table_name = 'products';
+	protected $_order_by = 'product_id';
 
       public $rules_admin = array(
     'prod_code' => array(

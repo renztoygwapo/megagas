@@ -7,7 +7,7 @@ class User extends Admin_Controller {
 
     public function login(){
     	
-    	$dashboard = 'admin/dashboard/index';
+    	$dashboard = 'admin/dashboard/';
     	$this->user_m->loggedin() == FALSE || redirect($dashboard);
     	
     	$rules = $this->user_m->rules;

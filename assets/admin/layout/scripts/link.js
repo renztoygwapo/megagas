@@ -1,10 +1,13 @@
 //logout 
 $('#logout').click(function(){
-		window.location	= "../user/logout";
+		window.location	= "user/logout";
 	});
 
 //product categories
-
 $('#prod_category').click(function(){
-    window.location = "../category/";
+    window.location = "category/";
+  });
+//products
+$('#products').click(function(){
+    window.location = "products/";
   });

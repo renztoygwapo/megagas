@@ -17,7 +17,14 @@ Rounded Portlets
 	border-radius: 0px 0px 4px 4px !important;
 }
 */
-.page-content-wrapper {
-  margin-top: 20px;
-  margin-left: 20px;
+.page-header.navbar .page-logo {
+font-size: 30px;
 }
+.page-header.navbar .page-logo  > .logo{
+    color: #CED37A;
+    opacity: 0.8;
+  }
+  .form-control{
+    margin-bottom: 3px;
+  }
+

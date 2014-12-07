@@ -1,13 +1,16 @@
 <?php $this->load->view('admin/components/page_head'); ?>
 
-	<div class="page-content-wrapper">
 
-			<h3 class="page-title">
+	<div class="container">
+	<h3>
 			WELCOME <small><?php echo $this->session->userdata('username'); ?></small>
 			</h3>
-		
+	<div class="row">
+		<div class="col-md-12">
+			
+			
 			<div class="tiles">
-				<div class="tile double-down bg-blue-hoki">
+				<div class="tile double-down bg-blue-hoki" id="products">
 					<div class="tile-body">
 						<i class="fa fa-shopping-cart"></i>
 					</div>
@@ -29,7 +32,7 @@
 							 PRODUCT CATEGORY
 						</div>
 						<div class="number">
-							 12
+							 <?php echo $this->db->count_all('category');?>
 						</div>
 					</div>
 				</div>
@@ -179,6 +182,20 @@
 					</div>
 				</div>
 			</div>
+
+		</div>
+
 			<!-- END PAGE CONTENT-->
 	</div>
+	</div>
+	<div class="page-footer">
+  <div class="page-footer-inner">
+    <p>Elapsed Time <strong>{elapsed_time}</strong> seconds</p>
+  </div>
+  <div class="page-footer-tools">
+    <span class="go-top">
+    <i class="fa fa-angle-up"></i>
+    </span>
+  </div>
+</div>
 <?php $this->load->view('admin/components/page_tail'); ?>
