@@ -21,7 +21,7 @@
 
           var unique_id = $.gritter.add({
                // (string | mandatory) the heading of the notification
-               title: 'Product Category',
+               title: 'Products',
                // (string | mandatory) the text inside the notification
                text: '<?php echo $this->session->flashdata('result') ?>',
                // (bool | optional) if you want it to fade out on its own or just sit there

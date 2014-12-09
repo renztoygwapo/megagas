@@ -6,21 +6,17 @@ class Products_m extends MY_Model
 	protected $_order_by = 'product_id';
 
       public $rules_admin = array(
-    'prod_code' => array(
-      'field' => 'prod_code', 
-      'label' => 'Product Code', 
+    'serial_no' => array(
+      'field' => 'serial_no', 
+      'label' => 'Serial No', 
       'rules' => 'trim|required|xss_clean'
     ), 
-      'prod_name' => array(
-      'field' => 'prod_name', 
-      'label' => 'Product Name', 
+      'price' => array(
+      'field' => 'price', 
+      'label' => 'Price', 
       'rules' => 'trim|required|xss_clean'
     ), 
-        'prod_desc' => array(
-      'field' => 'prod_desc', 
-      'label' => 'Product Description', 
-      'rules' => 'trim|required|xss_clean'
-    ), 
+      
   );
 
 

@@ -10,20 +10,25 @@
 	</div>
 	<div class="clear-fix"></div>
 	<!-- End of Navigation -->
+    <?php
+            //var_dump($product_id);
+             $query = $this->db->get_where('category', array('id' => $product_id));
+                                                                  $res = $query->result_array();
+                                                                  foreach ($res as $rows);
+            ?>
 	
 	<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<h3 class="page-title">
-					Edit Product Category 
+					Edit Product Category
 					</h3>
-
 					<div class="portlet-body">
 								<div class="tabbable">
 									<ul class="nav nav-tabs">
 										<li class="active">
 											<a href="#tab_addcat" data-toggle="tab">
-											Edit Category </a>
+											Edit <?php echo $rows['product_name']; ?></a>
 										</li>
 									
 									</ul>
@@ -35,28 +40,47 @@
 				<?php echo validation_errors(); ?>
 			</div>
 			<?php echo form_open();?>
+                  
 						<div class="form-body">
+
+
+
 												<div class="form-group">
-													<label class="col-md-2 control-label " for="prod_code">Product Code: 
+													<label class="col-md-2 control-label " for="product_id">Product Name: 
+													</label>
+													 <div class="col-md-10">
+                                                      <select name="product_id" class="form-control" required style=" text-transform: capitalize;" required>
+                                                      <option value="">--Please Select--</option>
+                                          <!-- Calling all Product CAtegory by Product Name -->
+
+
+                                                                <?php 
+                                                               
+                                                      $products = $this->db->get('category')->result_array();
+                                                      foreach($products as $row):
+                                                        ?>
+                                                                          <option value="<?php echo $row['id'];?>">
+                                                            <?php echo $row['product_name'];?>
+                                                                                </option>
+                                                                          <?php endforeach; ?>
+                            
+                                        </select>
+                          </div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-md-2 control-label" for="serial_no">Serial No: 
 													</label>
 													<div class="col-md-10">
-														<?php echo form_input('prod_code',set_value('prod_code', $product_code),'class="form-control"'); ?>
+														<?php echo form_input('serial_no',set_value('serial_no', $serial_no),'class="form-control" '); ?>
 													</div>
 												</div>
 
 												<div class="form-group">
-													<label class="col-md-2 control-label" for="prod_name">Product Name: 
+													<label class="col-md-2 control-label" for="price">Price: 
 													</label>
 													<div class="col-md-10">
-														<?php echo form_input('prod_name',set_value('prod_name', $product_name),'class="form-control" '); ?>
-													</div>
-												</div>
-
-												<div class="form-group">
-													<label class="col-md-2 control-label" for="prod_desc">Product Description: 
-													</label>
-													<div class="col-md-10">
-														<?php echo form_input('prod_desc',set_value('prod_desc', $product_desc),'class="form-control"'); ?>
+														<?php echo form_input('price',set_value('price', $price),'class="form-control"'); ?>
 													</div>
 												</div>
 												<div class="form-group">

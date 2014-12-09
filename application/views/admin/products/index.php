@@ -11,6 +11,7 @@
 	<div class="clear-fix"></div>
 	<!-- End of Navigation -->
 	
+
 	<div class="container">
 			<div class="row">
 
@@ -64,14 +65,19 @@
 							</thead>
 							<tbody>
 															<!-- calling all product Categories -->
-															<?php if(count($products)): foreach($products as $product): ?>	
+															<?php if(count($products)): foreach($products as $product): ?>
+
+									  <?php
+             								$query = $this->db->get_where('category', array('id' => $product->product_id));
+                                                                  $res = $query->result_array();
+                                                                  foreach ($res as $rows);                                         
+									 ?>
 										<tr>
-											<td><?php echo  $product->product_id; ?></td>
+											<td><?php echo  $rows['product_name']; ?></td>
 											<td><?php echo  $product->serial_no; ?></td>
 											<td><?php echo  $product->price; ?></td>
 											<td><?php echo anchor('admin/products/edit/' . $product->id, 'Edit'); ?> | <?php echo anchor('admin/products/delete/' . $product->id, 'Delete'); ?></td>
 										</tr>
-									
 														<?php endforeach; ?>
 														<?php else: ?>
 										<tr>
@@ -83,7 +89,6 @@
 							</table>
 						</div>
 					</div>
-
 
 						</div>
 						<div class="tab-pane" id="tab_addcat">
@@ -97,34 +102,34 @@
 													<label class="col-md-2 control-label " for="prod_code">Cylinder Type: 
 													</label>
 													<div class="col-md-10">
-											<select name="class_id" class="form-control" required>
-								                              <option value="">---Please Select a Type---</option>
+											<select name="product_id" class="form-control" required style=" text-transform: capitalize;">
+								                          <!-- Calling all Product CAtegory by Product Name -->
 								                              <?php 
-																		$products = $this->db->get('products')->result_array();
+																		$products = $this->db->get('category')->result_array();
 																		foreach($products as $row):
 																			?>
 								                                    		<option value="<?php echo $row['id'];?>">
-																					<?php echo $row['product_id'];?>
+																					<?php echo $row['product_name'];?>
 								                                              </option>
 								                                        <?php	endforeach; ?>
 														
-                        												  </select>
+                        								</select>
 													</div>
 												</div>
 
 												<div class="form-group">
-													<label class="col-md-2 control-label" for="prod_name">Serial No: 
+													<label class="col-md-2 control-label" for="serial">Serial No: 
 													</label>
 													<div class="col-md-10">
-														<input type="text" class="form-control" name="prod_name" required>
+														<input type="text" class="form-control" name="serial" required>
 													</div>
 												</div>
 
 												<div class="form-group">
-													<label class="col-md-2 control-label" for="prod_desc">Price: 
+													<label class="col-md-2 control-label" for="price">Price: 
 													</label>
 													<div class="col-md-10">
-														<input type="text" class="form-control" name="prod_desc" required>
+														<input type="number" class="form-control" name="price" required>
 													</div>
 												</div>
 												<div class="form-group">
