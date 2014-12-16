@@ -14,7 +14,7 @@ class Products extends Admin_Controller {
           if ($this->form_validation->run() == TRUE) {
             $data = array(
               'product_id' => $this->input->post('product_id'),
-               'serial_no' => $this->input->post('serial'),
+               'serial_no' => $this->input->post('serial_no'),
                 'price' => $this->input->post('price'),
 
               );
@@ -31,6 +31,7 @@ class Products extends Admin_Controller {
     public function delete($id){
       if($id){
         $this->products_m->delete($id);
+         $this->session->set_flashdata('result', 'Removed Successfully');
         redirect('admin/products');
       }
 

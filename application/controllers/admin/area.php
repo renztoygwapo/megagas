@@ -1,39 +1,37 @@
 <?php
-class Category extends Admin_Controller {
+class Area extends Admin_Controller {
 
     public function __construct(){
         parent::__construct();
-        $this->load->model('category_m');
+        $this->load->model('area_m');
     }
 
     public function index() {
       
 
       // Set up the form
-    $rules = $this->category_m->rules_admin;
+    $rules = $this->area_m->rules_admin;
     $this->form_validation->set_rules($rules);
           if ($this->form_validation->run() == TRUE) {
             $data = array(
-              'product_code' => $this->input->post('prod_code'),
-               'product_name' => $this->input->post('prod_name'),
-                'product_desc' => $this->input->post('prod_desc'),
-
+              'area_no' => $this->input->post('area_no'),
+               'location' => $this->input->post('location'),
+            
               );
-            $this->category_m->save($data);
-            $this->session->set_flashdata('result', 'Product Successfully Added');
-            redirect('admin/category','refresh');
+            $this->area_m->save($data);
+            $this->session->set_flashdata('area', 'Area Location Successfully Added');
+            redirect('admin/area','refresh');
           }
-            $data['categories'] = $this->category_m->get();
-            $this->load->view('admin/category/category', $data);
+            $data['areas'] = $this->area_m->get();
+            $this->load->view('admin/area/index', $data);
 
           
     }
 
     public function delete($id){
       if($id){
-        $this->category_m->delete($id);
-         $this->session->set_flashdata('result', 'Removed Successfully');
-        redirect('admin/category');
+        $this->area_m->delete($id);
+        redirect('admin/area');
       }
 
     }

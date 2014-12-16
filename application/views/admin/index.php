@@ -37,7 +37,7 @@
 					</div>
 				</div>
 			
-				<div class="tile selected bg-yellow-saffron">
+				<div class="tile bg-yellow-saffron" id="customer">
 					<div class="corner">
 					</div>
 					<div class="tile-body">

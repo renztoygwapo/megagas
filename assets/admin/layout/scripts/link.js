@@ -11,3 +11,8 @@ $('#prod_category').click(function(){
 $('#products').click(function(){
     window.location = "products/";
   });
+
+//customer
+$('#customer').click(function(){
+    window.location = "customer/";
+  });
