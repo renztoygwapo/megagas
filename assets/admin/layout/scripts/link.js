@@ -16,3 +16,13 @@ $('#products').click(function(){
 $('#customer').click(function(){
     window.location = "customer/";
   });
+
+//loadin
+$('#loadin').click(function(){
+    window.location = "loadin/";
+  });
+
+//loadout
+$('#loadout').click(function(){
+    window.location = "loadout/";
+  });

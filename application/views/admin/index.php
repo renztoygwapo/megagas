@@ -66,11 +66,11 @@
 				</div>
 				<div class="tile bg-purple-studio">
 					<div class="tile-body">
-						<i class="fa  fa-book"></i>
+						<i class="fa  fa-user"></i>
 					</div>
 					<div class="tile-object">
 						<div class="name">
-							 AREA
+							 DRIVER
 						</div>
 						<div class="number">
 							 13
@@ -104,7 +104,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="tile double bg-green">
+				<div class="tile double bg-green" id="loadin">
 					<div class="tile-body">
 						<i class="fa fa-mail-reply"></i>
 						<div class="name">
@@ -116,7 +116,7 @@
 					</div>
 				</div>
 
-				<div class="tile double bg-red">
+				<div class="tile double bg-red" id="loadout">
 					<div class="tile-body">
 						<i class="fa  fa-mail-forward"></i>
 						<div class="name">

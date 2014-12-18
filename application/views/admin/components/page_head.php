@@ -21,9 +21,17 @@
 <link href="<?php echo site_url('/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css'); ?>" rel="stylesheet" type="text/css"/>
 <link href="<?php echo site_url('/assets/global/plugins/fullcalendar/fullcalendar/fullcalendar.css'); ?>" rel="stylesheet" type="text/css"/>
 <link href="<?php echo site_url('/assets/global/plugins/jqvmap/jqvmap/jqvmap.css'); ?>" rel="stylesheet" type="text/css"/>
+<link href="<?php echo site_url('/assets/global/plugins/jquery-multi-select/css/multi-select.css'); ?>" rel="stylesheet" type="text/css"/>
+
+
+<link rel="stylesheet" type="text/css" href="<?php echo site_url('/assets/global/plugins/bootstrap-select/bootstrap-select.min.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo site_url('/assets/global/plugins/select2/select2.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo site_url('/assets/global/plugins/jquery-multi-select/css/multi-select.css'); ?>"/>
+
 <!-- END PAGE LEVEL PLUGIN STYLES -->
 <!-- BEGIN PAGE STYLES -->
 <link href="<?php echo site_url('/assets/admin/pages/css/tasks.css'); ?>" rel="stylesheet" type="text/css"/>
+
 <!-- END PAGE STYLES -->
 <!-- BEGIN THEME STYLES -->
 <link href="<?php echo site_url('/assets/global/css/components.css'); ?>" rel="stylesheet" type="text/css"/>

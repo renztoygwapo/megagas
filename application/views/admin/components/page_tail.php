@@ -9,7 +9,14 @@
 <script src="<?php echo site_url('/assets/global/plugins/jquery.cokie.min.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/global/plugins/uniform/jquery.uniform.min.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/jquery-multi-select/js/jquery.multi-select.js'); ?>" type="text/javascript"></script>
+
 <!-- END CORE PLUGINS -->
+
+<script type="text/javascript" src="<?php echo site_url('/assets/global/plugins/bootstrap-select/bootstrap-select.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo site_url('/assets/global/plugins/select2/select2.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo site_url('/assets/global/plugins/jquery-multi-select/js/jquery.multi-select.js'); ?> "></script>
+
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <script src="<?php echo site_url('/assets/global/plugins/jquery-validation/js/jquery.validate.min.js'); ?>" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
@@ -30,6 +37,8 @@
 <script src="<?php echo site_url('/assets/admin/pages/scripts/login.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/admin/layout/scripts/link.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/admin/pages/scripts/table-advanced.js'); ?>"></script>
+<script src="<?php echo site_url('/assets/admin/pages/scripts/components-dropdowns.js'); ?>"></script>
+
 
 <?php $this->load->view('admin/components/glitters'); ?>
 <script>
@@ -40,6 +49,8 @@ QuickSidebar.init(); // init quick sidebar
 Demo.init(); // init demo features
   Login.init();
   TableAdvanced.init();
+  ComponentsDropdowns.init();
+
 });
 </script>
 <!-- END JAVASCRIPTS -->

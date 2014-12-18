@@ -1,13 +1,21 @@
 <body class="login">
 <!-- BEGIN LOGO -->
-<div class="logo">
-	<h3 style="color:yellow;">MEGA GAS Corp.</h3>
-</div>
-
+			<div class="row">
+			<div class="col-sm-5"></div>
+				<div class="col-sm-2">
+					<center>
+				 <img src="<?php  echo site_url('/assets/admin/layout/img/megalogo.png'); ?>" class="img-responsive">
+				
+			</center>
+				</div>
+				<div class="col-sm-5"></div>
+			</div>
+	
 <!-- END SIDEBAR TOGGLER BUTTON -->
 <!-- BEGIN LOGIN -->
 <div class="content">
 	<!-- BEGIN LOGIN FORM -->
+	
 	<div class="alert alert-danger display-hide">
 	<button class="close" data-close="alert"></button>
 	<?php echo validation_errors(); ?>
