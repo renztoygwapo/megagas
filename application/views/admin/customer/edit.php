@@ -10,12 +10,7 @@
 	</div>
 	<div class="clear-fix"></div>
 	<!-- End of Navigation -->
-    <?php
-            //var_dump($product_id);
-             // $query = $this->db->get_where('category', array('id' => $product_id));
-             //                                                      $res = $query->result_array();
-             //                                                      foreach ($res as $rows);
-            ?>
+  
 	
 	<div class="container">
 			<div class="row">

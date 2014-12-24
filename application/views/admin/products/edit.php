@@ -77,13 +77,6 @@
 												</div>
 
 												<div class="form-group">
-													<label class="col-md-2 control-label" for="price">Price: 
-													</label>
-													<div class="col-md-10">
-														<?php echo form_input('price',set_value('price', $price),'class="form-control"'); ?>
-													</div>
-												</div>
-												<div class="form-group">
 													<label class="col-md-2 control-label"></label>
 													<div class="col-md-10">
 														<button type="submit" class="btn green"><i class="fa fa-send"></i> Save </button>

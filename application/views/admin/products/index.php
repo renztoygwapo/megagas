@@ -32,6 +32,11 @@
 											<i class="fa fa-plus-circle"></i>	
 											Add Cylinder </a>
 										</li>
+										<li>
+											<a href="#add_bulk" data-toggle="tab">
+											<i class="fa fa-plus-circle"></i>
+											Bulk Add Cylinder</a>
+										</li>
 										
 									</ul>
 									<div class="tab-content no-space">
@@ -56,9 +61,6 @@
 									 Serial No
 								</th>
 								<th>
-									 Price
-								</th>
-								<th>
 									Action
 								</th>
 							</tr>
@@ -75,7 +77,6 @@
 										<tr>
 											<td><?php echo  $rows['product_name']; ?></td>
 											<td><?php echo  $product->serial_no; ?></td>
-											<td><?php echo  $product->price; ?></td>
 											<td><?php echo anchor('admin/products/edit/' . $product->id, 'Edit'); ?> | <?php echo anchor('admin/products/delete/' . $product->id, 'Delete'); ?></td>
 										</tr>
 														<?php endforeach; ?>
@@ -125,13 +126,7 @@
 													</div>
 												</div>
 
-												<div class="form-group">
-													<label class="col-md-2 control-label" for="price">Price: 
-													</label>
-													<div class="col-md-10">
-														<input type="number" class="form-control" name="price" required>
-													</div>
-												</div>
+											
 												<div class="form-group">
 													<label class="col-md-2 control-label"></label>
 													<div class="col-md-10">
@@ -141,6 +136,51 @@
 												</div>
 						</div>
 			<?php echo form_close(); ?>					
+						</div>
+
+						<!-- Bulk Add Form -->
+						<div class="tab-pane" id="add_bulk">
+						<?php echo form_open('admin/products/product_add_bulk/import_excel/' , array('class' => 'form-horizontal form-groups-bordered validate', 'enctype' => 'multipart/form-data'));?>
+	
+						<div class="form-body">
+												<div class="form-group">
+													<label class="col-md-2 control-label " for="product_id">Cylinder Type: 
+													</label>
+													<div class="col-md-10">
+											<select name="product_id" class="form-control" required style=" text-transform: capitalize;" autofocus>
+								                          <!-- Calling all Product CAtegory by Product Name -->
+								                              <?php 
+																		$products = $this->db->get('category')->result_array();
+																		foreach($products as $row):
+																			?>
+								                                    		<option value="<?php echo $row['id'];?>">
+																					<?php echo $row['product_name'];?>
+								                                              </option>
+								                                        <?php	endforeach; ?>
+														
+                        								</select>
+													</div>
+												</div>
+
+												<div class="form-group">
+													<label class="col-md-2 control-label" for="serial">Select File:
+													</label>
+													<div class="col-md-10">
+														<input type="file" class="form-control" name="productfile" required>
+													</div>
+												</div>
+
+											
+												<div class="form-group">
+													<label class="col-md-2 control-label"></label>
+													<div class="col-md-10">
+														<button type="submit" class="btn green"><i class="fa fa-send"></i> Upload and Import </button>
+													</div>
+													
+												</div>
+						</div>
+						 <?php echo form_close();?>
+
 						</div>
 						<div class="clear-fix"></div>
 				</div>

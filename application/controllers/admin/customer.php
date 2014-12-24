@@ -65,4 +65,20 @@ class Customer extends Admin_Controller {
 
     }
 
+    public function profile($id){
+
+       $this->data['id'] = $this->customer_m->get($id);
+       if(count($this->data['id']) == 1){
+        // var_dump($this->data['id']);
+
+         // Set up the form
+
+         $this->load->view('admin/customer/profile',$this->data['id']);
+      }
+    else{
+        redirect('admin/customer');
+    }
+
+    }
+
 }

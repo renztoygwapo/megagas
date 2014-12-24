@@ -10,22 +10,32 @@
 	</div>
 	<div class="clear-fix"></div>
 	<!-- End of Navigation -->
-	
 
 	<div class="container">
 			<div class="row">
 
 				<div class="col-md-12">
-					<h3 class="page-title">
-					Customer Management  
-					</h3>
+					<h2 class="page-title">
+					<?php echo $customer_name;?>
+					</h2>
+					<div class="row">
+						<div class="col-lg-6">
+							<p>Address: <?php echo $address;?></p>
+							<p>Area No: <?php echo $area_no;?></p>
+							<p>Contact No: <?php echo $contact_no;?></p>
+						</div>
+
+						<div class="col-lg-6">
+							<h3>Cylinder Price</h3>
+						</div>
+					</div>
 
 					<div class="portlet-body">
 								<div class="tabbable">
 									<ul class="nav nav-tabs">
 										<li class="active">
 											<a href="#tab_category" data-toggle="tab">
-											Customer List </a>
+											Customer Records </a>
 										</li>
 										<li>
 											<a href="#tab_addcat" data-toggle="tab">
@@ -50,39 +60,30 @@
 							<thead>
 							<tr>
 								<th>
-									 Customer Name
+									 Type
 								</th>
 								<th>
-									 Address
+									 Serial No
 								</th>
 								<th>
-									Area No
-								</th>
-								<th>
-									Contact No
-								</th>
-								<th>
-									Action
+									Status
 								</th>
 							</tr>
 							</thead>
 							<tbody>
-									<!-- calling all customer Location -->
-									<?php if(count($customers)): foreach($customers as $customer): ?>
+								
+								<tr>
+									<td>Argon</td>
+									<td>443</td>
+									<td>UnReturn</td>
+								</tr>
 
-										<tr>
-											<td><?php echo anchor('admin/customer/profile/' . $customer->id, ' '.$customer->customer_name.''); ?></td>
-											<td><?php echo  $customer->address; ?></td>
-											<td><?php echo  $customer->area_no; ?></td>
-											<td><?php echo  $customer->contact_no; ?></td>
-											<td><?php echo anchor('admin/customer/edit/' . $customer->id, 'Edit',array('onclick' => "return confirm('You are about to delete a record. This cannot be undone. Are you sure?');")); ?> | <?php echo anchor('admin/customer/delete/' . $customer->id, 'Delete'); ?></td>
-										</tr>
-														<?php endforeach; ?>
-														<?php else: ?>
-										<tr>
-											<td colspan="3">We could not find any customer.</td>
-										</tr>
-								<?php endif; ?>	
+								<tr>
+									<td>Industrial Oxygen</td>
+									<td>347</td>
+									<td>UnReturn</td>
+								</tr>
+
 
 							</tbody>
 							</table>
